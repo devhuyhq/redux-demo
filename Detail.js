@@ -11,11 +11,9 @@ import { connect } from "react-redux";
 import TodoList from "./TodoList";
 import FCM, { NotificationActionType } from "react-native-fcm";
 import { addGroupEvery1Second, addGroup } from "./actions/group.action";
-import { NavigationActions } from "react-navigation";
 
-class Main extends Component {
+class Detail extends Component {
   render(): ReactNode {
-    console.log(this.props.nav);
     if (this.props.loading) return <ActivityIndicator />;
     return (
       <View style={styles.container}>
@@ -27,16 +25,9 @@ class Main extends Component {
         <TouchableOpacity onPress={this.addNewGroup}>
           <Text style={styles.text}>Add new group</Text>
         </TouchableOpacity>
-        <TouchableOpacity onPress={this.jump}>
-          <Text style={styles.text}>Jump</Text>
-        </TouchableOpacity>
       </View>
     );
   }
-
-  jump = () => {
-    this.props.dispatch(NavigationActions.navigate({ routeName: "Detail" }));
-  };
 
   componentDidMount = () => {
     FCM.getFCMToken().then(token => {
@@ -88,15 +79,14 @@ class Main extends Component {
 const mapStateToProps = state => {
   return {
     groups: state.group.groups,
-    loading: state.group.loading,
-    nav: state.nav
+    loading: state.group.loading
   };
 };
 
 export default connect(
   mapStateToProps,
   null
-)(Main);
+)(Detail);
 
 const styles = StyleSheet.create({
   container: {

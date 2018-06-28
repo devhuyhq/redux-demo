@@ -1,6 +1,6 @@
 const initialState = {
   todos: [],
-  loading: true
+  loading: false
 };
 
 export const todoReducer = (state = initialState, action) => {

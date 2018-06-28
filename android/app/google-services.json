@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1039164005826",
+    "firebase_url": "https://fir-fcm-5ae18.firebaseio.com",
+    "project_id": "fir-fcm-5ae18",
+    "storage_bucket": "fir-fcm-5ae18.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1039164005826:android:acc4c1645c83d0f9",
+        "android_client_info": {
+          "package_name": "com.reduxdemo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1039164005826-1s2up5tq6b3psq7prdqqn6sseklhf56g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATWSGiqbeTvwMAkmUkBXqMv9Dr7LN5Zfw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
